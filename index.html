@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국립과학수사연구원(NFS) 디지털 과학수사 체험·소개 포털</title>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 상단 내비게이션 -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="nfs_official_logo.png" alt="대한민국 국립과학수사연구원 공식 로고" class="official-logo-img logo-light">
+                <img src="nfs_official_logo_dark.png" alt="대한민국 국립과학수사연구원 공식 로고" class="official-logo-img logo-dark">
+            </a>
+            <nav class="nav-menu">
+                <a href="#intro" class="nav-item">연구원 소개</a>
+                <a href="#departments" class="nav-item">주요 감정·연구 분야</a>
+                <a href="#faq" class="nav-item">과학수사 Q&A</a>
+                <a href="#lab-sim" class="nav-item highlight"><i data-lucide="microscope"></i> 가상 감정실 체험</a>
+            </nav>
+            <div class="nav-actions">
+                <span class="status-indicator">
+                    <span class="pulse-dot"></span> 24시 과학감정 지원체계
+                </span>
+                <!-- 주간 / 야간 모드 전환 토글 버튼 -->
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="주간/야간 모드 전환" title="주간/야간 모드 전환">
+                    <i data-lucide="moon" class="theme-icon dark-icon"></i>
+                    <i data-lucide="sun" class="theme-icon light-icon"></i>
+                    <span class="theme-label">야간모드</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 -->
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <i data-lucide="shield-check"></i> 진실을 밝히는 보이지 않는 손, 과학수사
+            </div>
+            <h1 class="hero-title">
+                "모든 접촉은 흔적을 남긴다"<br>
+                <span class="gradient-text">과학적 진실로 국민의 신뢰와 인권을 수호합니다</span>
+            </h1>
+            <p class="hero-desc">
+                국립과학수사연구원(NFS)은 범죄 수사 및 사건·사고 원인 규명을 위한 법의학, 법유전자, 
+                법독성학, 디지털·교통 및 3D 물리 흔적 분석 등 세계 최고 수준의 첨단 감정 시스템을 운영하고 있습니다.
+            </p>
+            <div class="hero-buttons">
+                <a href="#lab-sim" class="btn btn-primary"><i data-lucide="flask-conical"></i> 가상 과학감정 체험하기</a>
+                <a href="#departments" class="btn btn-outline"><i data-lucide="layers"></i> 6대 핵심 감정분야 탐색</a>
+            </div>
+
+            <!-- 핵심 지표 요약 -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num">65년+</div>
+                    <div class="stat-label">대한민국 과학수사의 역사</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">600,000+</div>
+                    <div class="stat-label">연간 법과학 감정 건수</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">99.9%</div>
+                    <div class="stat-label">국제 공인 시험기관 신뢰도 (KOLAS)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">6개소</div>
+                    <div class="stat-label">본원(원주) 및 전국 5대 지방과학수사연구소</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 연구원 핵심 가치 & 로카르 원칙 -->
+    <section id="intro" class="section intro-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Core Principles</span>
+                <h2>법과학의 3대 핵심 가치</h2>
+                <p>국립과학수사연구원의 모든 감정은 공정성, 재현성, 법적 증거능력을 엄격히 준수합니다.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card value-card">
+                    <div class="card-icon"><i data-lucide="scale"></i></div>
+                    <h3>법적 증거능력 (Evidentiary Admissibility)</h3>
+                    <p>철저한 증거물 수집·보관·이송(Chain of Custody) 체계를 통해 법정에서 의심의 여지 없이 인정받는 증거만을 확립합니다.</p>
+                </div>
+                <div class="card value-card">
+                    <div class="card-icon"><i data-lucide="rotate-ccw"></i></div>
+                    <h3>과학적 재현성 (Scientific Reproducibility)</h3>
+                    <p>세계 표준 검증 프로토콜과 엄격한 통계적 신뢰도 평가(95% 신뢰구간, LR 등)를 거쳐 언제 어느 과학자가 시험해도 동일한 결과를 보장합니다.</p>
+                </div>
+                <div class="card value-card">
+                    <div class="card-icon"><i data-lucide="fingerprint"></i></div>
+                    <h3>로카르의 교환 원칙 (Locard's Principle)</h3>
+                    <p>"모든 접촉은 물질을 남기거나 가져간다." 미세증거물과 3D 미세 흔적까지 놓치지 않고 과학적으로 복원해냅니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6대 주요 감정 업무 소개 -->
+    <section id="departments" class="section departments-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Major Departments</span>
+                <h2>국립과학수사연구원의 주요 전문 업무</h2>
+                <p>국과수의 각 전문 분석과는 미제 사건부터 대형 재난 현장까지 다학제적 융합 분석을 수행합니다.</p>
+            </div>
+
+            <div class="grid grid-3 dept-grid">
+                <!-- 1. 법의학부 -->
+                <div class="card dept-card" data-dept="forensic-medicine">
+                    <div class="dept-header">
+                        <span class="dept-badge"><i data-lucide="heart-pulse"></i> 법의학부</span>
+                    </div>
+                    <h3>사인 규명 및 법의검사</h3>
+                    <p class="dept-desc">억울한 죽음이 없도록 부검 및 사후 영상의학(Post-mortem CT)을 통해 정확한 사망 원인과 손상 기전을 의학적으로 규명합니다.</p>
+                    <ul class="dept-features">
+                        <li><i data-lucide="check-circle-2"></i> 법의부검 및 조직병리 검사</li>
+                        <li><i data-lucide="check-circle-2"></i> 사후 가상부검(Virtopsy / PMCT)</li>
+                        <li><i data-lucide="check-circle-2"></i> 성범죄 및 신체 손상 법의감정</li>
+                    </ul>
+                </div>
+
+                <!-- 2. 법유전자분석과 -->
+                <div class="card dept-card" data-dept="dna">
+                    <div class="dept-header">
+                        <span class="dept-badge"><i data-lucide="dna"></i> 법유전자분석과</span>
+                    </div>
+                    <h3>DNA 감식 및 신원 확인</h3>
+                    <p class="dept-desc">혈흔, 모발, 타액 등 극미량의 생체 시료에서 DNA 프로필(STR, SNP, 미토콘드리아 DNA)을 추출하여 개인 식별 및 혈연관계를 판정합니다.</p>
+                    <ul class="dept-features">
+                        <li><i data-lucide="check-circle-2"></i> 범죄 현장 접촉성(Touch) 극미량 DNA 분석</li>
+                        <li><i data-lucide="check-circle-2"></i> 대규모 재난 실종자 신원확인(DVI)</li>
+                        <li><i data-lucide="check-circle-2"></i> 국립 DNA 데이터베이스 감식</li>
+                    </ul>
+                </div>
+
+                <!-- 3. 법독성·화학분석과 -->
+                <div class="card dept-card" data-dept="toxicology">
+                    <div class="dept-header">
+                        <span class="dept-badge"><i data-lucide="flask-round"></i> 법독성·화학분석과</span>
+                    </div>
+                    <h3>마약·독극물 및 유해화학물질 감정</h3>
+                    <p class="dept-desc">생체 시료(혈액, 소변, 모발) 및 불법 압수물 내 마약류, 신종 합성물질, 독극물, 농약 등을 질량분석기(LC-MS/MS, GC-MS)로 정밀 검출합니다.</p>
+                    <ul class="dept-features">
+                        <li><i data-lucide="check-circle-2"></i> 신종 마약류 탐색 및 대사체 추적</li>
+                        <li><i data-lucide="check-circle-2"></i> 음주 운전 역추적(위드마크 공식) 감정</li>
+                        <li><i data-lucide="check-circle-2"></i> 유독물 중독 사망 원인 규명</li>
+                    </ul>
+                </div>
+
+                <!-- 4. 법공학부 (교통/화재/안전) -->
+                <div class="card dept-card" data-dept="engineering">
+                    <div class="dept-header">
+                        <span class="dept-badge"><i data-lucide="car"></i> 법공학부</span>
+                    </div>
+                    <h3>교통사고·화재 및 안전사고 분석</h3>
+                    <p class="dept-desc">차량 EDR(사고기록장치) 데이터 복원, 충돌 시뮬레이션(PC-CRASH), 발화 패턴 분석을 통해 사고의 진실과 과실을 공학적으로 규명합니다.</p>
+                    <ul class="dept-features">
+                        <li><i data-lucide="check-circle-2"></i> EDR 및 자동차 급발진 의혹 정밀 검증</li>
+                        <li><i data-lucide="check-circle-2"></i> 화재 연소패턴 및 전기적 단락흔 분석</li>
+                        <li><i data-lucide="check-circle-2"></i> 대형 건축물 붕괴·산업재해 원인 감정</li>
+                    </ul>
+                </div>
+
+                <!-- 5. 디지털·영상포렌식과 -->
+                <div class="card dept-card" data-dept="digital">
+                    <div class="dept-header">
+                        <span class="dept-badge"><i data-lucide="laptop"></i> 디지털포렌식과</span>
+                    </div>
+                    <h3>디지털 증거 복원 및 영상/음성 분석</h3>
+                    <p class="dept-desc">스마트폰, PC, 블랙박스, CCTV 영상의 위·변조 판별, 저화질 영상 개선 및 인공지능 기반 음성·얼굴 인식 식별을 수행합니다.</p>
+                    <ul class="dept-features">
+                        <li><i data-lucide="check-circle-2"></i> 파손·암호화 디지털 저장매체 데이터 복원</li>
+                        <li><i data-lucide="check-circle-2"></i> CCTV 차량번호판 및 인물 동질성 분석</li>
+                        <li><i data-lucide="check-circle-2"></i> 딥페이크 위조 영상 및 보이스피싱 음성 분석</li>
+                    </ul>
+                </div>
+
+                <!-- 6. 미세흔적 및 3D 형태학 분석과 -->
+                <div class="card dept-card highlight-card" data-dept="trace-3d">
+                    <div class="dept-header">
+                        <span class="dept-badge"><i data-lucide="scan"></i> 미세흔적 & 3D 형태학</span>
+                    </div>
+                    <h3>총기·공구흔 및 3D 계산형태학</h3>
+                    <p class="dept-desc">발사된 탄환의 강선흔, 침입 범죄 도구흔(Toolmark), 족흔 등을 3D 광학 스캐너와 Micro-CT로 정밀 복원하여 통계적 동일성을 입증합니다.</p>
+                    <ul class="dept-features">
+                        <li><i data-lucide="check-circle-2"></i> 3D 탄도학 강선흔(Striae) 정밀 스캔 분석</li>
+                        <li><i data-lucide="check-circle-2"></i> 도구흔 연속일치조흔(CMS) 및 유사도 판별</li>
+                        <li><i data-lucide="check-circle-2"></i> 3D 스캔 기반 사건 현장 공간 재구성</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 과학수사 자주 묻는 질문 (FAQ) -->
+    <section id="faq" class="section faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Public FAQ</span>
+                <h2>과학수사에 대해 국민이 가장 궁금해하는 5가지</h2>
+                <p>드라마와 실제 과학수사의 차이점부터 국과수 감정 절차까지 명쾌하게 설명해 드립니다.</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q1. 국과수에는 일반 국민이 직접 개인적으로 감정을 의뢰할 수 있나요?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>아닙니다.</strong> 국립과학수사연구원은 사법기관의 공정한 수사와 재판을 지원하는 국가 감정기관입니다. 따라서 경찰청, 검찰청, 법원, 군사법경찰 등 공인된 사법·수사 기관을 통해서만 공식 감정 의뢰가 접수됩니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q2. 드라마에서는 10분 만에 DNA 결과가 나오던데 실제로는 얼마나 걸리나요?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>실제 DNA 감정은 시료 정제, 중합효소 연쇄반응(PCR) 증폭, 모세관 전기영동 및 두 명 이상의 법과학자 교차 검증을 거치므로 긴급 사건의 경우 24~48시간, 일반 감정의 경우 1~2주가 소요됩니다. 철저한 법적 증거능력 확보를 위한 필수적 과정입니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q3. 부검은 모든 사망 사건에서 진행되나요?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>사인이 불분명한 변사 사건이나 범죄 혐의가 의심되는 경우, 검사의 청구와 법원의 부검 영장 발부를 통해 엄격한 법적 절차 하에 진행됩니다. 최근에는 유족의 심적 부담을 덜고 미세 골절 등을 입체 확인하기 위해 사후 CT(PMCT) 가상부검을 적극 병행하고 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q4. 3D 스캔 및 디지털 포렌식 기술은 어떻게 범인을 특정하나요?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>창문을 뜯고 침입한 드라이버의 미세한 날 자국(0.01mm 오차), 발사된 탄환 표면의 3D 나선 흠집, 흐릿한 CCTV 영상 속 차량 번호판을 수학적 알고리즘으로 복원하여 법정에서 움직일 수 없는 통계적 일치도를 도출합니다.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Q5. 국립과학수사연구원의 연구원이 되려면 어떤 전공을 해야 하나요?</span>
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>의학(법의관), 생물학·유전공학(DNA), 화학·약학(마약·독극물), 기계·전자공학(교통·화재·3D 형태학), 컴퓨터공학(디지털포렌식) 등 다양한 이공계 및 의학 전공자들이 각 전문 분야의 법과학 연구관·연구사로 활약하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 인터랙티브 체험형 가상 감정실 (Virtual Lab Simulation) -->
+    <section id="lab-sim" class="section lab-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Interactive Experience</span>
+                <h2>🔬 가상 과학수사 감정실 체험</h2>
+                <p>일반인도 쉽게 이해할 수 있는 4가지 대표 과학수사 과정을 직접 클릭해 보고 결과를 판독해보세요.</p>
+            </div>
+
+            <div class="lab-workspace">
+                <!-- 탭 버튼 -->
+                <div class="lab-tabs">
+                    <button class="tab-btn active" data-tab="tab-ballistics">
+                        <i data-lucide="crosshair"></i> 1. 3D 탄환 강선흔 대조
+                    </button>
+                    <button class="tab-btn" data-tab="tab-dna">
+                        <i data-lucide="dna"></i> 2. DNA STR 유전자형 일치 검사
+                    </button>
+                    <button class="tab-btn" data-tab="tab-edr">
+                        <i data-lucide="gauge"></i> 3. 차량 EDR 급발진 의혹 분석
+                    </button>
+                    <button class="tab-btn" data-tab="tab-toxicology">
+                        <i data-lucide="activity"></i> 4. 질량분석기(MS) 약물 검출
+                    </button>
+                </div>
+
+                <!-- 탭 1: 3D 탄환 강선흔 대조 시뮬레이터 -->
+                <div class="tab-pane active" id="tab-ballistics">
+                    <div class="sim-container">
+                        <div class="sim-info-box">
+                            <h4><i data-lucide="info"></i> 감정 원리: 총기 강선흔(Striation) 비교 및 CMS 분석</h4>
+                            <p>총열 내부의 나선형 강선은 탄환이 회전하며 발사될 때 고유한 미세 흠집(Striae)을 남깁니다. 3D 스캐너로 표면 높낮이를 측정한 뒤 알고리즘(Point-to-Plane ICP)으로 회전 정렬하여 일치도를 계산합니다.</p>
+                        </div>
+
+                        <div class="sim-playground dual-viewer">
+                            <div class="viewer-box">
+                                <div class="viewer-header">
+                                    <span>[증거물 A] 사건 현장 수거 탄환 (3D 표면)</span>
+                                    <span class="badge badge-evidence">Evidence #24-B102</span>
+                                </div>
+                                <div class="canvas-wrapper">
+                                    <canvas id="canvas-bullet-a" width="340" height="200"></canvas>
+                                    <div class="canvas-tag">기준 표면 프로파일</div>
+                                </div>
+                            </div>
+                            <div class="viewer-box">
+                                <div class="viewer-header">
+                                    <span>[대조물 B] 용의 총기 시험발사 탄환</span>
+                                    <span class="badge badge-suspect">Test Sample #01</span>
+                                </div>
+                                <div class="canvas-wrapper">
+                                    <canvas id="canvas-bullet-b" width="340" height="200"></canvas>
+                                    <div class="canvas-tag">정렬 대상 프로파일</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 컨트롤 패널 -->
+                        <div class="sim-controls">
+                            <div class="control-group">
+                                <label for="bullet-rotate"><i data-lucide="rotate-cw"></i> 3D 원주 각도 미세 회전 정렬:</label>
+                                <input type="range" id="bullet-rotate" min="0" max="360" value="75" step="1">
+                                <span id="rotate-val" class="ctrl-val">75°</span>
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-secondary" id="btn-auto-align"><i data-lucide="sparkles"></i> 3D 자동 정렬(ICP) 실행</button>
+                                <button class="btn btn-primary" id="btn-verify-bullet"><i data-lucide="check-circle"></i> 법과학 일치율 판독</button>
+                            </div>
+                        </div>
+
+                        <!-- 판독 결과 창 -->
+                        <div class="sim-result" id="bullet-result">
+                            <div class="result-header">
+                                <span class="result-title"><i data-lucide="file-text"></i> 감정 판독 리포트</span>
+                                <span class="result-status" id="bullet-verdict">판독 대기 중</span>
+                            </div>
+                            <div class="result-grid">
+                                <div class="result-metric">
+                                    <span class="metric-label">연속일치조흔(CMS) 라인 수:</span>
+                                    <span class="metric-value" id="val-cms">-</span>
+                                </div>
+                                <div class="result-metric">
+                                    <span class="metric-label">표면 RMS 일치 오차:</span>
+                                    <span class="metric-value" id="val-rms">-</span>
+                                </div>
+                                <div class="result-metric">
+                                    <span class="metric-label">우도비(Likelihood Ratio, LR):</span>
+                                    <span class="metric-value" id="val-lr">-</span>
+                                </div>
+                            </div>
+                            <p class="result-note" id="bullet-note">각도를 회전시켜 양쪽 탄환의 미세 강선 홈 패턴을 완벽히 일치시켜 보세요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 탭 2: DNA STR 프로파일 대조 -->
+                <div class="tab-pane" id="tab-dna">
+                    <div class="sim-container">
+                        <div class="sim-info-box">
+                            <h4><i data-lucide="info"></i> 감정 원리: STR (Short Tandem Repeat) 유전자 좌위 판독</h4>
+                            <p>인간 게놈의 특정 부위에 나타나는 짧은 반복 서열(STR)의 반복 횟수를 분석합니다. 15개 이상의 유전자 좌위(Locus)가 모두 일치할 경우 동일인일 확률은 1조 명 중 1명 수준에 달합니다.</p>
+                        </div>
+
+                        <div class="dna-table-wrapper">
+                            <table class="dna-table">
+                                <thead>
+                                    <tr>
+                                        <th>유전자 좌위 (Locus)</th>
+                                        <th>현장 혈흔 (Evidence)</th>
+                                        <th>용의자 A 프로필</th>
+                                        <th>용의자 B 프로필</th>
+                                        <th>대조 상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>D3S1358</strong></td>
+                                        <td><span class="allele-tag">15, 17</span></td>
+                                        <td><span class="allele-tag">15, 17</span></td>
+                                        <td><span class="allele-tag diff">14, 16</span></td>
+                                        <td class="match-cell match"><i data-lucide="check"></i> 용의자A 일치</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>vWA</strong></td>
+                                        <td><span class="allele-tag">16, 18</span></td>
+                                        <td><span class="allele-tag">16, 18</span></td>
+                                        <td><span class="allele-tag diff">17, 19</span></td>
+                                        <td class="match-cell match"><i data-lucide="check"></i> 용의자A 일치</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>FGA</strong></td>
+                                        <td><span class="allele-tag">21, 24</span></td>
+                                        <td><span class="allele-tag">21, 24</span></td>
+                                        <td><span class="allele-tag diff">20, 22</span></td>
+                                        <td class="match-cell match"><i data-lucide="check"></i> 용의자A 일치</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>TH01</strong></td>
+                                        <td><span class="allele-tag">7, 9</span></td>
+                                        <td><span class="allele-tag">7, 9</span></td>
+                                        <td><span class="allele-tag diff">6, 9.3</span></td>
+                                        <td class="match-cell match"><i data-lucide="check"></i> 용의자A 일치</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="sim-controls">
+                            <button class="btn btn-primary" id="btn-calc-dna"><i data-lucide="calculator"></i> 전좌위 일치 확률 및 신원확인 판정</button>
+                        </div>
+
+                        <div class="sim-result" id="dna-result" style="display:none;">
+                            <div class="result-header">
+                                <span class="result-title"><i data-lucide="file-check"></i> 국과수 유전자 감정 결과서</span>
+                                <span class="result-status status-match">동일인 입증 (확률 99.999999%)</span>
+                            </div>
+                            <p style="margin-top: 10px; font-size: 0.95rem;">
+                                현장 증거물에서 검출된 STR 유전자형 16개 좌위 전체가 <strong>용의자 A의 프로필과 오차 없이 100% 일치</strong>함을 확인하였습니다. (무작위 일치 확률 1.4 × 10<sup>-17</sup> 이하)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 탭 3: 자동차 EDR 급발진 분석 -->
+                <div class="tab-pane" id="tab-edr">
+                    <div class="sim-container">
+                        <div class="sim-info-box">
+                            <h4><i data-lucide="info"></i> 감정 원리: 사고기록장치(EDR) 및 브레이크 압력 센서 검증</h4>
+                            <p>충돌 전 5초 동안의 차속, 엔진 회전수(RPM), 가속페달 변위량(APS), 제동페달(브레이크 스위치 ON/OFF)의 물리적 신호를 과학적으로 역추적합니다.</p>
+                        </div>
+
+                        <div class="edr-graph-box">
+                            <canvas id="canvas-edr" width="700" height="260"></canvas>
+                        </div>
+
+                        <div class="sim-controls">
+                            <button class="btn btn-primary" id="btn-replay-edr"><i data-lucide="play"></i> 충돌 전 5초 EDR 텔레메트리 재생</button>
+                            <span class="edr-time" id="edr-timer">충돌 전 -5.0초</span>
+                        </div>
+
+                        <div class="sim-result" id="edr-result">
+                            <div class="result-header">
+                                <span class="result-title"><i data-lucide="cpu"></i> EDR 센서 공학 판독 요약</span>
+                                <span class="result-status status-alert">가속 페달 99% 조작 확인</span>
+                            </div>
+                            <p style="margin-top: 10px; font-size: 0.95rem;">
+                                충돌 직전 3.5초부터 충돌 시점까지 <strong>가속페달(APS)은 99% 최대로 밟혀 있었으며</strong>, 브레이크 작동 신호는 OFF 상태였습니다. 이는 운전자의 페달 오조작 기전과 부합합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 탭 4: 법독성학 질량분석기(MS) -->
+                <div class="tab-pane" id="tab-toxicology">
+                    <div class="sim-container">
+                        <div class="sim-info-box">
+                            <h4><i data-lucide="info"></i> 감정 원리: 고분해능 액체크로마토그래피 질량분석 (LC-HRMS)</h4>
+                            <p>체내에서 대사된 미량의 약물 및 유해 화학물질 분자를 이온화시켜 질량 대 전하비(m/z)를 측정하여 10억 분의 1(ppb) 단위까지 분자 지문을 찾아냅니다.</p>
+                        </div>
+
+                        <div class="spec-canvas-box">
+                            <canvas id="canvas-spec" width="700" height="240"></canvas>
+                        </div>
+
+                        <div class="sim-controls">
+                            <div class="btn-group">
+                                <button class="btn btn-secondary drug-filter-btn active" data-sample="sample1">혈액 시료 검사 (케이스 1)</button>
+                                <button class="btn btn-secondary drug-filter-btn" data-sample="sample2">모발 미세 축적 검사 (케이스 2)</button>
+                            </div>
+                        </div>
+
+                        <div class="sim-result" id="tox-result">
+                            <div class="result-header">
+                                <span class="result-title"><i data-lucide="file-warning"></i> 독성학 스크리닝 판정</span>
+                                <span class="result-status status-detected" id="tox-status">메트암페타민 양성 (350 ng/mL)</span>
+                            </div>
+                            <p id="tox-desc" style="margin-top: 10px; font-size: 0.95rem;">
+                                머무름 시간(RT) 4.25분 및 특이적 분자 이온 피크(m/z 150.12)에서 마약류 성분이 정확히 분리·검출되었습니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="nfs_official_logo_dark.png" alt="국립과학수사연구원 로고" class="footer-logo-img">
+                </div>
+                <p>본 포털은 국민의 과학수사 이해 증진과 알기 쉬운 정보 제공을 위해 제작된 정보 안내 및 가상체험 페이지입니다.</p>
+                <p class="copyright">© National Forensic Service. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <h4>관련 공공기관 바로가기</h4>
+                <ul>
+                    <li><a href="https://www.nfs.go.kr" target="_blank" rel="noopener">국립과학수사연구원 공식 홈페이지</a></li>
+                    <li><a href="https://www.police.go.kr" target="_blank" rel="noopener">경찰청 과학수사관리관</a></li>
+                    <li><a href="https://www.spo.go.kr" target="_blank" rel="noopener">대검찰청 과학수사부</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 자바스크립트 로직 -->
+    <script src="script.js"></script>
+    <script>
+        // Lucide 아이콘 렌더링
+        lucide.createIcons();
+    </script>
+</body>
+</html>
